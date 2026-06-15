@@ -1,8 +1,8 @@
 <div id="firstrunwizard">
 
-<a id="closeWizard" class="close">
-	<img class="svg" src="<?php print_unescaped(OCP\Util::imagePath('core', 'actions/close.svg')); ?>">
-</a>
+<button id="closeWizard" type="button" class="close" aria-label="<?php p($l->t('Close')); ?>">
+	<img class="svg" src="<?php print_unescaped(OCP\Util::imagePath('core', 'actions/close.svg')); ?>" alt="">
+</button>
 <h1><?php p($l->t('A safe home for all your data')); ?></h1>
 <?php if ($_['edition'] === \OC_Util::EDITION_COMMUNITY): ?>
 <p><?php p($l->t('Access & share your files, calendars, contacts, mail & more from any device, on your terms'));?></p>
