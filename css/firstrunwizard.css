@@ -48,6 +48,15 @@
 	top: 0;
 	right: 0;
 	padding: 20px;
+	margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+#firstrunwizard .close:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
 }
 
 #cboxClose {
