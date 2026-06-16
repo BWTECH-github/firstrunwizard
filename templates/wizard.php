@@ -39,7 +39,7 @@
 <?php else: ?>
 <br><br><br>
 <a target="_blank" class="button" href="<?php p(link_to_docs('user-manual')); ?>">
-	<img class="appsmall svg" src="<?php print_unescaped(OCP\Util::imagePath('settings', 'help.svg')); ?>" /> <?php p($l->t('Documentation'));?>
+	<img class="appsmall svg" alt="" src="<?php print_unescaped(OCP\Util::imagePath('settings', 'help.svg')); ?>" /> <?php p($l->t('Documentation'));?>
 </a>
 <?php endif; ?>
 <a target="_blank" class="button" href="<?php p(link_to_docs('user-webdav')); ?>">
