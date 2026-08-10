@@ -9,9 +9,9 @@ This is a PHP 8.4 fork maintained by BW-Tech GmbH for owncloud.online.
 </description>
 	<licence>AGPL</licence>
 	<author>Frank Karlitschek, Jan-Christoph Borchardt, Tom Needham, modified by BW-Tech GmbH</author>
-	<website>https://github.com/GrossLukas/firstrunwizard</website>
-	<bugs>https://github.com/GrossLukas/firstrunwizard/issues</bugs>
-	<repository type="git">https://github.com/GrossLukas/firstrunwizard.git</repository>
+	<website>https://github.com/BWTECH-github/firstrunwizard</website>
+	<bugs>https://github.com/BWTECH-github/firstrunwizard/issues</bugs>
+	<repository type="git">https://github.com/BWTECH-github/firstrunwizard.git</repository>
 	<dependencies>
 		<php min-version="8.4" />
 		<owncloud min-version="11" max-version="11.99" />
