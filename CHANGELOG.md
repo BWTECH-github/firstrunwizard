@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-08-10
+
+### Fixed
+
+- The dialog no longer sits below its own frame. The colorbox theme reserves 20px
+  above the content for a title and counter that this app never sets, and it
+  hides colorbox's close button in favour of its own - so the strip stayed empty.
+  The focus ring made it visible: colorbox focuses `#colorbox` (`tabindex="-1"`)
+  when opening, and the `[tabindex]:focus-visible` rule from core draws the ring
+  around that outer box, which therefore started 20px above the white dialog.
+  Measured in the browser: frame and dialog now share all four edges, gap 0
+  instead of 20px, still centred, close still works and still disables the wizard.
+
 ## [1.2.0] - 2019-04-16
 
 ### Added
