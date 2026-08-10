@@ -62,3 +62,17 @@
 #cboxClose {
 	display: none;
 }
+
+/*
+ * Das colorbox-Theme reserviert oberhalb des Inhalts 20px fuer Titel und
+ * Zaehler (#cboxTitle/#cboxCurrent sitzen mit top:-20px darin). Der Wizard
+ * setzt beides nicht und blendet auch #cboxClose aus - der Streifen bleibt
+ * also leer. Sichtbar wurde er durch den Fokusrahmen: colorbox fokussiert
+ * beim Oeffnen #colorbox (tabindex="-1"), und die Regel
+ * [tabindex]:focus-visible in core/css/styles.css legt den Rahmen um genau
+ * diesen aeusseren Kasten - der dadurch 20px hoeher begann als der sichtbare
+ * Dialog. Ohne den toten Streifen deckt sich beides wieder.
+ */
+#cboxContent {
+	margin-top: 0;
+}
