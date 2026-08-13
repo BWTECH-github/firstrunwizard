@@ -12,7 +12,7 @@ OC.L10N.register(
     "Connect your Contacts" : "连接你的通讯录",
     "Documentation" : "文档",
     "Access files via WebDAV" : "通过 WebDAV 访问你的文件",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "访问<a target=\"_blank\" href=\"%s\">文档</a>和我们的<a target=\"_blank\" href=\"http://owncloud.org\">网站</a>了解更多信息。",
-    "If you like ownCloud,\n\t<a href=\"mailto:?subject=ownCloud\n\t\t&body=ownCloud is a great open software to sync and share your files.\n\t\tYou can freely get it from http://owncloud.org\">\n\t\trecommend it to your friends</a>\n\tand <a href=\"http://owncloud.org/promote\"\n\t\ttarget=\"_blank\">spread the word</a>!" : "如果喜欢 ownCloud,\n\t<a href=\"mailto:?subject=ownCloud\n\t\t&body=ownCloud is a great open software to sync and share your files.\n\t\tYou can freely get it from http://owncloud.org\">\n\t\t推荐给其他朋友</a>\n\t并 <a href=\"http://owncloud.org/promote\"\n\t\ttarget=\"_blank\">帮助宣传</a>!"
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "访问<a target=\"_blank\" href=\"%s\">文档</a>和我们的<a target=\"_blank\" href=\"https://owncloud.online\">网站</a>了解更多信息。",
+    "If you like owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online is a great way to sync and share your files.\n\t\tYou can find out more at https://owncloud.online\">\n\t\trecommend it to your friends</a>\n\tand <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">spread the word</a>!" : "如果喜欢 owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online is a great open software to sync and share your files.\n\t\tYou can freely get it from https://owncloud.online\">\n\t\t推荐给其他朋友</a>\n\t并 <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">帮助宣传</a>!"
 },
 "nplurals=1; plural=0;");

@@ -7,6 +7,6 @@
     "Connect your Contacts" : "Connecte tu  contactos",
     "Access files via WebDAV" : "Accede a files via WebDAV",
     "Documentation" : "Documentation",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Il ha plure information in le <a target=\"_blank\" href=\"%s\">documentation</a> e sur nostre <a target=\"_blank\" href=\"http://owncloud.org\">sito web</a>."
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Il ha plure information in le <a target=\"_blank\" href=\"%s\">documentation</a> e sur nostre <a target=\"_blank\" href=\"https://owncloud.online\">sito web</a>."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

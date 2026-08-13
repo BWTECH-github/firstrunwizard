@@ -11,6 +11,6 @@ OC.L10N.register(
     "Connect your Contacts" : "Ühenda oma kontaktid",
     "Documentation" : "Dokumentatsioon",
     "Access files via WebDAV" : "Ligipääs WebDAV vahendusel",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Rohkem infot leiad <a target=\"_blank\" href=\"%s\">dokumentatsioonist</a> ja meie <a target=\"_blank\" href=\"http://owncloud.org\">veebilehelt</a>."
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Rohkem infot leiad <a target=\"_blank\" href=\"%s\">dokumentatsioonist</a> ja meie <a target=\"_blank\" href=\"https://owncloud.online\">veebilehelt</a>."
 },
 "nplurals=2; plural=(n != 1);");

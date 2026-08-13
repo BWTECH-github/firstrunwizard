@@ -8,6 +8,6 @@
     "Connect your Contacts" : "Konektu viajn Kontaktojn",
     "Documentation" : "Dokumentaro",
     "Access files via WebDAV" : "Atingu dosierojn per WebDAV",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Estas pli da informo en la <a target=\"_blank\" href=\"%s\">dokumentaro</a> kaj en nia <a target=\"_blank\" href=\"http://owncloud.org\">TTT-ejo</a>."
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Estas pli da informo en la <a target=\"_blank\" href=\"%s\">dokumentaro</a> kaj en nia <a target=\"_blank\" href=\"https://owncloud.online\">TTT-ejo</a>."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
