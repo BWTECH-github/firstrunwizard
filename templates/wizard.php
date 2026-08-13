@@ -51,12 +51,12 @@
 <p class="footnote">
 <?php if ($_['edition'] === ''): ?>
 <?php print_unescaped($l->t('There’s more information in the <a target="_blank" href="%s">documentation</a> and on our <a target="_blank" href="http://owncloud.org">website</a>.', [link_to_docs('user_manual')])); ?><br>
-<?php print_unescaped($l->t('If you like ownCloud,
-	<a href="mailto:?subject=ownCloud
-		&body=ownCloud is a great open software to sync and share your files.
-		You can freely get it from http://owncloud.org">
+<?php print_unescaped($l->t('If you like owncloud.online,
+	<a href="mailto:?subject=owncloud.online
+		&body=owncloud.online is a great way to sync and share your files.
+		You can find out more at https://owncloud.online">
 		recommend it to your friends</a>
-	and <a href="http://owncloud.org/promote"
+	and <a href="https://owncloud.online"
 		target="_blank">spread the word</a>!')); ?>
 <?php else: ?>
 © <?php p(\date('Y')) ?> <a href="<?php p($theme->getBaseUrl()); ?>" target="_blank"><?php p($theme->getEntity()); ?></a>
