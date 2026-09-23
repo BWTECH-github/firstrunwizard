@@ -5,7 +5,7 @@
 </button>
 <h1><?php p($l->t('A safe home for all your data')); ?></h1>
 <?php if ($_['edition'] === \OC_Util::EDITION_COMMUNITY): ?>
-<p><?php p($l->t('Access & share your files, calendars, contacts, mail & more from any device, on your terms'));?></p>
+<p><?php p($l->t('Access & share your files from any device, on your terms'));?></p>
 <?php else: ?>
 <p><?php p($theme->getSlogan()); ?></p>
 <?php endif; ?>
@@ -24,33 +24,19 @@
 		alt="<?php p($l->t('iOS app'));?>" style="height:60px"/>
 </a>
 
-<?php if ($_['edition'] === \OC_Util::EDITION_COMMUNITY): ?>
-<h2><?php p($l->t('Connect your desktop apps to %s', [$theme->getName()])); ?></h2>
-<a target="_blank" class="button" href="<?php p(link_to_docs('user-sync-calendars')) ?>">
-	<img class="appsmall appsmall-calendar svg" alt=""
-		src="<?php print_unescaped(OCP\Util::imagePath('core', 'places/calendar-dark.svg')); ?>" />
-	<?php p($l->t('Connect your Calendar'));?>
-</a>
-<a target="_blank" class="button" href="<?php p(link_to_docs('user-sync-contacts')) ?>">
-	<img class="appsmall appsmall-contacts svg" alt=""
-		src="<?php print_unescaped(OCP\Util::imagePath('core', 'places/contacts-dark.svg')); ?>" />
-	<?php p($l->t('Connect your Contacts'));?>
-</a>
-<?php else: ?>
-<br><br><br>
+<?php /* Kalender, Kontakte und die WebDAV-Anleitung entfallen: owncloud.online
+   hat weder Kalender noch Kontakte, und die Dokumentation hat keine
+   WebDAV-Seite - die Knöpfe führten auf die Startseite der Doku bzw. auf
+   eine unpassende Seite (Befund Redesign-Server 23.09.2026). Es bleibt der
+   Weg in die Nutzerdokumentation. */ ?>
+<br><br>
 <a target="_blank" class="button" href="<?php p(link_to_docs('user-manual')); ?>">
 	<img class="appsmall svg" alt="" src="<?php print_unescaped(OCP\Util::imagePath('settings', 'help.svg')); ?>" /> <?php p($l->t('Documentation'));?>
-</a>
-<?php endif; ?>
-<a target="_blank" class="button" href="<?php p(link_to_docs('user-webdav')); ?>">
-	<img class="appsmall svg" alt=""
-		src="<?php print_unescaped(OCP\Util::imagePath('files', 'folder.svg')); ?>" />
-	<?php p($l->t('Access files via WebDAV'));?>
 </a>
 
 <p class="footnote">
 <?php if ($_['edition'] === ''): ?>
-<?php print_unescaped($l->t('There’s more information in the <a target="_blank" href="%s">documentation</a> and on our <a target="_blank" href="http://owncloud.org">website</a>.', [link_to_docs('user_manual')])); ?><br>
+<?php print_unescaped($l->t('There’s more information in the <a target="_blank" href="%s">documentation</a> and on our <a target="_blank" href="https://owncloud.online">website</a>.', [link_to_docs('user_manual')])); ?><br>
 <?php print_unescaped($l->t('If you like owncloud.online,
 	<a href="mailto:?subject=owncloud.online
 		&body=owncloud.online is a great way to sync and share your files.

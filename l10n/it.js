@@ -12,7 +12,7 @@ OC.L10N.register(
     "Connect your Contacts" : "Connetti i tuoi contatti",
     "Documentation" : "Documentazione",
     "Access files via WebDAV" : "Accedi ai file tramite WebDAV",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Ulteriori informazioni sono disponibili nella <a target=\"_blank\" href=\"%s\">documentazione</a>  e sul nostro <a target=\"_blank\" href=\"https://owncloud.online\">sito web</a>.",
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"https://owncloud.online\">website</a>." : "Ulteriori informazioni sono disponibili nella <a target=\"_blank\" href=\"%s\">documentazione</a>  e sul nostro <a target=\"_blank\" href=\"https://owncloud.online\">sito web</a>.",
     "If you like owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online is a great way to sync and share your files.\n\t\tYou can find out more at https://owncloud.online\">\n\t\trecommend it to your friends</a>\n\tand <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">spread the word</a>!" : "Se ti piace owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online è un incredibile programma aperto per sincronizzare e condividere i tuoi file. \n\t\tPuoi scaricarlo liberamente da  https://owncloud.online\">\n\t\tconsiglialo ai tuoi amici</a>\n\te <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">diffondi il verbo</a>!"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

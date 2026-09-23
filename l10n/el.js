@@ -12,7 +12,7 @@ OC.L10N.register(
     "Connect your Contacts" : "Συνδέστε τις Επαφές σας",
     "Documentation" : "Τεκμηρίωση",
     "Access files via WebDAV" : "Πρόσβαση στα αρχεία μέσω WebDAV",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Υπάρχουν περισσότερες πληροφορίες στην ιστοσελίδα  <a target=\"_blank\" href=\"%s\">τεκμηρίωσης</a> και στον <a target=\"_blank\" href=\"https://owncloud.online\">ιστότοπό μας</a>.",
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"https://owncloud.online\">website</a>." : "Υπάρχουν περισσότερες πληροφορίες στην ιστοσελίδα  <a target=\"_blank\" href=\"%s\">τεκμηρίωσης</a> και στον <a target=\"_blank\" href=\"https://owncloud.online\">ιστότοπό μας</a>.",
     "If you like owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online is a great way to sync and share your files.\n\t\tYou can find out more at https://owncloud.online\">\n\t\trecommend it to your friends</a>\n\tand <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">spread the word</a>!" : "Εάν σας αρέσει το owncloud.online, ⇥<a href=\"mailto:?subject=owncloud.online ⇥⇥&body=Το owncloud.online είναι ένα υπέροχο πρόγραμμα ανοιχτού κώδικα για να συγχρονίζετε και να μοιράζεστε τα αρχεία σας. ⇥⇥Μπορείτε να το αποκτήσετε δωρεάν από το https://owncloud.online\"> ⇥⇥προτείνετε το στους φίλους σας</a> ⇥και <a href=\"https://owncloud.online\" ⇥⇥target=\"_blank\">διαδώστε το παντού</a>!"
 },
 "nplurals=2; plural=(n != 1);");

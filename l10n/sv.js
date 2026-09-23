@@ -12,7 +12,7 @@ OC.L10N.register(
     "Connect your Contacts" : "Anslut dina Kontakter",
     "Documentation" : "Dokumentation",
     "Access files via WebDAV" : "Åtkomst av filer via WebDAV",
-    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." : "Det finns mer information i <a target=\"_blank\" href=\"%s\">dokumentationen</a> och på vår <a target=\"_bland\" href=\"https://owncloud.online\">hemsida</a>",
+    "There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"https://owncloud.online\">website</a>." : "Det finns mer information i <a target=\"_blank\" href=\"%s\">dokumentationen</a> och på vår <a target=\"_bland\" href=\"https://owncloud.online\">hemsida</a>",
     "If you like owncloud.online,\n\t<a href=\"mailto:?subject=owncloud.online\n\t\t&body=owncloud.online is a great way to sync and share your files.\n\t\tYou can find out more at https://owncloud.online\">\n\t\trecommend it to your friends</a>\n\tand <a href=\"https://owncloud.online\"\n\t\ttarget=\"_blank\">spread the word</a>!" : "Om du gillar owncloud.online, <a href=\"mailto:?subject=owncloud.online&body=owncloud.online är en riktigt bra open-source mjukvara för att synka och dela dina filer. Du kan hämta det gratis från https://owncloud.online\"> rekomendera det till dina vänner</a> och <a href=\"https://owncloud.online\" target=\"_blank\">sprid det vidare</a>!"
 },
 "nplurals=2; plural=(n != 1);");

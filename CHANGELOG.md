@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
+## [2.0.0] - 2026-09-23
+
+Redesign-Linie (owncloud.online 11.1). Für 11.0 gilt weiter der Zweig `main`.
+
+### Changed
+
+- Die Knöpfe „Verbinde Deinen Kalender“, „Verbinde Deine Kontakte“ und „Greife auf Dateien über WebDAV zu“ entfallen: owncloud.online hat weder Kalender noch Kontakte, und die Dokumentation hat keine WebDAV-Seite – die Knöpfe führten auf die Startseite der Doku bzw. eine unpassende Seite. Es bleibt der Knopf „Dokumentation“ (Nutzerdokumentation).
+- Der Einleitungssatz nennt nur noch Dateien.
+- Fremdlink auf owncloud.org durch https://owncloud.online ersetzt.
+
 ## [1.3.3] - 2026-08-13
 
 ### Changed

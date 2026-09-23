@@ -6,6 +6,6 @@ $TRANSLATIONS = array(
 "Connect your Contacts" => "Conecte sus Contactos",
 "Access files via WebDAV" => "Acceda a sus archivos vía WebDAV",
 "Documentation" => "Documentación",
-"There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"http://owncloud.org\">website</a>." => "Hay más información en la <a target=\"_blank\" href=\"%s\">documantación</a> y en nuestro  <a target=\"_blank\" href=\"http://owncloud.org\">sitio web</a>."
+"There’s more information in the <a target=\"_blank\" href=\"%s\">documentation</a> and on our <a target=\"_blank\" href=\"https://owncloud.online\">website</a>." => "Hay más información en la <a target=\"_blank\" href=\"%s\">documantación</a> y en nuestro  <a target=\"_blank\" href=\"https://owncloud.online\">sitio web</a>."
 );
 $PLURAL_FORMS = "nplurals=2; plural=(n != 1);";
