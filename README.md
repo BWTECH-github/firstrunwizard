@@ -2,10 +2,12 @@
 
 Zeigt neuen Nutzern beim ersten Anmelden ein Fenster, das die wichtigsten
 Wege erklärt: wo die Dateien liegen, wie geteilt wird und wo es die Programme
-für Arbeitsplatz und Telefon gibt. Danach erscheint es nicht wieder.
+für Arbeitsplatz und Telefon gibt. Es erscheint auf der ersten Seite nach der
+Anmeldung – auf *Start*, bei Konten ohne Start in der Dateiliste – und nach
+dem Schließen nicht wieder.
 
 Wer es später noch einmal sehen möchte, findet den Knopf dafür in den
-persönlichen Einstellungen unter *Allgemein*.
+persönlichen Einstellungen unter *Zusätzlich*.
 
 ## Voraussetzungen
 

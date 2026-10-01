@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
+## [2.0.1] - 2026-10-01
+
+### Fixed
+
+- Die Erstinformation erscheint beim ersten Login sofort auf *Start* (apps/dashboard), der ersten Seite nach der Anmeldung. Bisher hing sie nur an der Dateiliste und kam erst nach dem Klick auf „Alle Dateien“. Nach dem Schließen bleibt sie aus, auch in der Dateiliste.
+- Der Dialog passt sich dem Fenster an: am Rechner höchstens 760 px breit und so hoch wie der Inhalt, auf dem Handy fast randlos; ist das Fenster zu niedrig, rollt der Inhalt im Dialog. Bisher 70 % x 70 % – auf dem Handy 273 px schmal und unten aus dem Fenster gelaufen. Beim Ändern der Fenstergröße (Drehen) passt er sich neu an.
+- Der Dialog trägt seine Überschrift als Namen (`aria-labelledby`); der Schließen-Knopf heißt auf Deutsch „Schließen“ statt „Close“.
+
 ## [2.0.0] - 2026-09-23
 
 Redesign-Linie (owncloud.online 11.1). Für 11.0 gilt weiter der Zweig `main`.
