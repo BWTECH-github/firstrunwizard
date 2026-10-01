@@ -14,6 +14,33 @@
 	margin: 35px 0 10px;
 }
 
+/* Lange Wörter („Speicherplatz“, „Synchronisierung“) ragten auf dem Handy
+   über den Rand des Dialogs. */
+#firstrunwizard h1,
+#firstrunwizard h2,
+#firstrunwizard p {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Kein einzelnes Wort allein in der zweiten Zeile („… für all Ihre / Daten“). */
+#firstrunwizard h1,
+#firstrunwizard h2 {
+	text-wrap: balance;
+}
+
+/* Auf dem Handy brach die 40-px-Überschrift in vier Zeilen um. Der Abstand
+   nach oben bleibt, damit sie nicht unter den Schließen-Knopf läuft. */
+@media (max-width: 767px) {
+	#firstrunwizard h1 {
+		font-size: 28px;
+	}
+
+	#firstrunwizard h2 {
+		margin-top: 24px;
+	}
+}
+
 #firstrunwizard .appsmall {
 	height: 16px;
 	width: 16px;
