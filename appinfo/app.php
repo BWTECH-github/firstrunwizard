@@ -28,17 +28,20 @@ Util::addScript('firstrunwizard', 'jquery.colorbox');
 Util::addScript('firstrunwizard', 'firstrunwizard');
 Util::addStyle('firstrunwizard', 'firstrunwizard');
 
-// only load when the file app displays
-$eventDispatcher = \OC::$server->getEventDispatcher();
-$eventDispatcher->addListener(
-	'OCA\Files::loadAdditionalScripts',
-	function () {
-		$config = \OC::$server->getConfig();
-		$userSession = \OC::$server->getUserSession();
-		$firstRunConfig = new Config($config, $userSession);
+// Der Auslöser gehört auf die erste Seite nach der Anmeldung. Im Redesign ist
+// das Start (apps/dashboard); hing er nur an der Dateiliste, sah ein neues
+// Konto die Erstinformation erst nach dem Klick auf „Alle Dateien“. Die
+// Dateiliste bleibt für Konten ohne Start und für Direktlinks dorthin.
+// Andere Seiten (Einstellungen, Linkfreigaben) bleiben ohne den Dialog.
+$loadActivation = function () {
+	$config = \OC::$server->getConfig();
+	$userSession = \OC::$server->getUserSession();
+	$firstRunConfig = new Config($config, $userSession);
 
-		if ($userSession->isLoggedIn() && $firstRunConfig->isEnabled()) {
-			Util::addScript('firstrunwizard', 'activate');
-		}
+	if ($userSession->isLoggedIn() && $firstRunConfig->isEnabled()) {
+		Util::addScript('firstrunwizard', 'activate');
 	}
-);
+};
+$eventDispatcher = \OC::$server->getEventDispatcher();
+$eventDispatcher->addListener('OCA\Dashboard::loadAdditionalScripts', $loadActivation);
+$eventDispatcher->addListener('OCA\Files::loadAdditionalScripts', $loadActivation);
