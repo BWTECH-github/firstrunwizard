@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
+- Anrede (de, de_CH): „Verbinde Deine Desktop-Anwendungen …“, „… Deine Kalender“, „… Deine Kontakte“ im Willkommens-Popup klein wie die übrige Oberfläche.
 - Sprache (de_CH): Der zweite Satz des Willkommens-Popups („Access & share your files from any device, on your terms“) fehlte und stand englisch.
 - Sprache: Der Hinweis „If you like owncloud.online, …“ enthielt in de und de_CH das Zeichen „⇥“ statt Tabulatoren (sichtbar und im Attribut `target="_blank"` zerstörend), dazu „empfehle“ statt „empfiehl“. Der Block erscheint nur ohne Edition und ist auf dem Server derzeit unsichtbar.
 - Anrede: „Deiner/Du“ in de und de_CH klein.
