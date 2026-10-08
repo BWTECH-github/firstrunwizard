@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Sprache (de_CH): Der zweite Satz des Willkommens-Popups („Access & share your files from any device, on your terms“) fehlte und stand englisch.
 - Sprache: Der Hinweis „If you like owncloud.online, …“ enthielt in de und de_CH das Zeichen „⇥“ statt Tabulatoren (sichtbar und im Attribut `target="_blank"` zerstörend), dazu „empfehle“ statt „empfiehl“. Der Block erscheint nur ohne Edition und ist auf dem Server derzeit unsichtbar.
 - Anrede: „Deiner/Du“ in de und de_CH klein.
+- Anrede (de_DE): Der lange Willkommenssatz („Access & share your files, calendars, contacts, mail & more …“) stand im Sie-Katalog in Du-Form. Er wird derzeit nicht angezeigt (die Vorlage nutzt die kurze Fassung).
 
 ## [2.0.1] - 2026-10-01
 
