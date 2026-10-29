@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
+## [2.0.3] - 2026-10-29
+
+### Behoben
+
+- Willkommensdialog: Tastaturbedienung vervollständigt (Fokus bleibt im Dialog und kehrt nach dem Schließen zurück), sichtbarer Fokus am Schließen-Knopf.
+- „Dokumentation“ im Redesign-Stil; Verweise in neue Fenster sind angesagt.
+- „Einführung erneut anzeigen“ ändert die Adresse nicht mehr.
+
 ## [2.0.2] - 2026-10-07
 
 ### Fixed

@@ -34,7 +34,56 @@
 		resizeTimer = setTimeout(fitWizard, 100);
 	}
 
+	/*
+	 * Tab läuft im Dialog im Kreis. colorbox fängt den Fokus erst auf, wenn er
+	 * schon draußen auf einem Element gelandet ist, und setzt ihn dann auf den
+	 * Kasten statt auf das erste Bedienelement - hinter dem letzten Verweis
+	 * ging der Fokus so aus dem Dialog in die Browserleiste (WCAG 2.4.3).
+	 */
+	function fokusImKreis(e) {
+		if (e.key !== 'Tab' && e.keyCode !== 9) {
+			return;
+		}
+		var box = document.getElementById('colorbox');
+		if (!box) {
+			return;
+		}
+		var ziele = $(box).find('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])')
+			.filter(':visible').get();
+		if (!ziele.length) {
+			return;
+		}
+		var erstes = ziele[0];
+		var letztes = ziele[ziele.length - 1];
+		var wo = document.activeElement;
+		if (!e.shiftKey && (wo === letztes || !box.contains(wo))) {
+			e.preventDefault();
+			erstes.focus();
+		} else if (e.shiftKey && (wo === erstes || wo === box || !box.contains(wo))) {
+			e.preventDefault();
+			letztes.focus();
+		}
+	}
+
+	/*
+	 * Nach dem Schließen gehört der Fokus dorthin zurück, wo er vorher war
+	 * (etwa auf „Einführung erneut anzeigen“). Öffnete sich der Dialog von
+	 * selbst nach der Anmeldung, beginnt die Seite beim Sprungverweis - sonst
+	 * stünde der Fokus auf <body>.
+	 */
+	function fokusZurueck(vorher) {
+		var ziel = vorher;
+		if (!ziel || ziel === document.body || !document.documentElement.contains(ziel)
+			|| (document.getElementById('colorbox') && document.getElementById('colorbox').contains(ziel))) {
+			ziel = document.querySelector('.bwt-skip-link');
+		}
+		if (ziel && typeof ziel.focus === 'function') {
+			ziel.focus();
+		}
+	}
+
 	window.showfirstrunwizard = function () {
+		var vorher = document.activeElement;
 		$.colorbox({
 			opacity: 0.4,
 			transition: prefersReducedMotion() ? 'none' : 'elastic',
@@ -56,6 +105,15 @@
 				}
 				// Bilder ohne feste Maße (auch aus Theme-Vorlagen) schieben den
 				// Inhalt erst nach dem Laden auseinander.
+				$('#colorbox').attr('aria-modal', 'true');
+				// Neue Fenster: rel gegen Zugriff auf diese Seite, Hinweis für
+				// Sprachausgaben aus dem Kern (der beobachtet nur #content, der
+				// Dialog hängt an <body>).
+				$('#firstrunwizard a[target="_blank"]').attr('rel', 'noopener noreferrer');
+				if (window.OCO && typeof window.OCO.markNewWindowLinks === 'function') {
+					window.OCO.markNewWindowLinks(document.getElementById('firstrunwizard'));
+				}
+				$(document).on('keydown.firstrunwizard', fokusImKreis);
 				$('#firstrunwizard img').on('load', fitWizard);
 				$(window).on('resize', onWindowResize);
 				fitWizard();
@@ -63,7 +121,10 @@
 			onClosed: function () {
 				clearTimeout(resizeTimer);
 				$(window).off('resize', onWindowResize);
-				$('#colorbox').removeAttr('aria-labelledby');
+				$('#colorbox').removeAttr('aria-labelledby').removeAttr('aria-modal');
+				$(document).off('keydown.firstrunwizard', fokusImKreis);
+				// nach colorbox' eigenem returnFocus, das ohne Auslöser ins Leere geht
+				setTimeout(function () { fokusZurueck(vorher); }, 0);
 				$.ajax({
 					url: OC.filePath('firstrunwizard', 'ajax', 'disable.php'),
 					data: ''
@@ -72,6 +133,11 @@
 		});
 	};
 
-	$(document).on('click', '#showWizard', window.showfirstrunwizard);
+	// preventDefault: #showWizard ist ein <a href="#"> (Kernvorlage), der Klick
+	// hängte sonst ein „#“ an die Adresse.
+	$(document).on('click', '#showWizard', function (e) {
+		e.preventDefault();
+		window.showfirstrunwizard();
+	});
 	$(document).on('click', '#closeWizard', $.colorbox.close);
 })(jQuery);

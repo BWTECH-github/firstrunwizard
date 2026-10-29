@@ -31,7 +31,7 @@
    Weg in die Nutzerdokumentation. */ ?>
 <br><br>
 <a target="_blank" class="button" href="<?php p(link_to_docs('user-manual')); ?>">
-	<img class="appsmall svg" alt="" src="<?php print_unescaped(OCP\Util::imagePath('settings', 'help.svg')); ?>" /> <?php p($l->t('Documentation'));?>
+	<?php p($l->t('Documentation'));?>
 </a>
 
 <p class="footnote">

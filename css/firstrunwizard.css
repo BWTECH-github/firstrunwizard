@@ -41,20 +41,27 @@
 	}
 }
 
-#firstrunwizard .appsmall {
-	height: 16px;
-	width: 16px;
-	position: relative;
+/* Der Doku-Verweis ist ein Nebenknopf im Redesign-Stil. Der Dialog hängt an
+   <body>, außerhalb von #app-content - die Knopfregeln des Kerns greifen dort
+   nicht, ohne diese Regel stand ein eckiger Altknopf da. */
+#firstrunwizard a.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: 40px;
+	padding: 0 20px;
+	border: 1px solid var(--oco-border-control, #78899f);
+	border-radius: var(--oco-radius-pill, 999px);
+	background: var(--oco-surface, #ffffff);
+	color: var(--oco-text-heading, #041e42);
+	font: 600 14px/1.25 var(--oco-font-ui, system-ui, sans-serif);
+	text-decoration: none;
+	cursor: pointer;
 }
 
-#firstrunwizard .appsmall-calendar,
-#firstrunwizard .appsmall-contacts {
-	filter: alpha(opacity=65);
-	opacity: 0.65;
-}
-
-#firstrunwizard .button {
-	display: inline-block;
+#firstrunwizard a.button:hover {
+	border-color: var(--oco-border-hover, #041e42);
 }
 
 #firstrunwizard p a {
@@ -78,12 +85,14 @@
 	margin: 0;
 	background: none;
 	border: none;
+	border-radius: 50%;
 	cursor: pointer;
 }
 
+/* Der Dialog ist weiß: ein weißer Ring war unsichtbar. */
 #firstrunwizard .close:focus-visible {
-	outline: 2px solid #fff;
-	outline-offset: 2px;
+	outline: var(--oco-focus-width, 2px) solid var(--oco-focus-color, #00806b);
+	outline-offset: -6px;
 }
 
 #cboxClose {
