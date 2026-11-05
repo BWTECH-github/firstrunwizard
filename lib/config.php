@@ -77,7 +77,14 @@ class Config {
 	public function isEnabled() {
 		$user = $this->userSession->getUser();
 		if ($user) {
-			$conf = $this->config->getUserValue($user->getUID(), 'firstrunwizard', 'show', 1);
+			$uid = $user->getUID();
+			// Gäste (App guests) bekommen den Assistenten nicht: Er stellt
+			// Clients und Apps vor, die einem Gast nicht offenstehen. Die
+			// Abfrage ist dieselbe wie in der App guests.
+			if ((bool) $this->config->getUserValue($uid, 'owncloud', 'isGuest', '')) {
+				return false;
+			}
+			$conf = $this->config->getUserValue($uid, 'firstrunwizard', 'show', 1);
 			return (\intval($conf) === 1);
 		} else {
 			return false;

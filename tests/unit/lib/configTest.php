@@ -123,7 +123,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @param bool $isEnabled
+	 * @param bool|string|null $isEnabled
 	 *
 	 * @return void
 	 *
@@ -152,10 +152,12 @@ class ConfigTest extends \PHPUnit\Framework\TestCase {
 				->method('getUser')
 				->will($this->returnValue($user));
 
-			$config->expects($this->once())
+			$config->expects($this->exactly(2))
 				->method('getUserValue')
-				->with('user123', 'firstrunwizard', 'show', 1)
-				->will($this->returnValue(1));
+				->willReturnMap([
+					['user123', 'owncloud', 'isGuest', '', ''],
+					['user123', 'firstrunwizard', 'show', 1, 1],
+				]);
 
 			$c = new Config($config, $userSession);
 			$this->assertEquals(true, $c->isEnabled());
@@ -168,10 +170,29 @@ class ConfigTest extends \PHPUnit\Framework\TestCase {
 				->method('getUser')
 				->will($this->returnValue($user));
 
+			$config->expects($this->exactly(2))
+				->method('getUserValue')
+				->willReturnMap([
+					['user123', 'owncloud', 'isGuest', '', ''],
+					['user123', 'firstrunwizard', 'show', 1, 0],
+				]);
+
+			$c = new Config($config, $userSession);
+			$this->assertEquals(false, $c->isEnabled());
+		} elseif ($isEnabled === 'guest') {
+			// Ein Gast sieht den Assistenten nie, auch nicht mit show = 1.
+			$user->expects($this->once())
+				->method('getUID')
+				->will($this->returnValue('user123'));
+
+			$userSession->expects($this->once())
+				->method('getUser')
+				->will($this->returnValue($user));
+
 			$config->expects($this->once())
 				->method('getUserValue')
-				->with('user123', 'firstrunwizard', 'show', 1)
-				->will($this->returnValue(0));
+				->with('user123', 'owncloud', 'isGuest', '')
+				->will($this->returnValue('1'));
 
 			$c = new Config($config, $userSession);
 			$this->assertEquals(false, $c->isEnabled());
@@ -196,6 +217,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase {
 		return [
 			[true],
 			[false],
+			['guest'],
 			[null],
 		];
 	}
